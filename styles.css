@@ -1,0 +1,32 @@
+/* Target the #composer-background element */
+#composer-background {
+  display: flex !important; /* Force flexbox layout */
+  flex-direction: row !important; /* Arrange items in a row */
+  align-items: center; /* Vertically align the elements */
+  justify-content: space-between; /* Distribute space evenly */
+  gap: 10px; /* Add some space between the items */
+  padding: 10px; /* Add padding inside the composer */
+}
+
+/* Adjust individual child elements inside the composer */
+#composer-background > div {
+  display: flex;
+  align-items: center; /* Vertically center the child elements */
+  gap: 10px; /* Add space between each child */
+}
+
+/* Ensure the textarea fills the remaining space */
+#composer-background textarea {
+  flex-grow: 1; /* Make textarea take available space */
+  min-width: 0;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Optional: if you want specific icon styling */
+#composer-background button svg {
+  width: 24px;
+  height: 24px;
+}
