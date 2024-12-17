@@ -30,3 +30,8 @@
   width: 24px;
   height: 24px;
 }
+
+/* Target the .bg-token-main-surface-primary class */
+.bg-token-main-surface-primary {
+  background-color: transparent !important;
+}
