@@ -35,3 +35,21 @@
 .bg-token-main-surface-primary {
   background-color: transparent !important;
 }
+
+/* Hide text below textfield */
+
+.relative.w-full.px-2.py-2.text-center.text-xs.text-token-text-secondary.empty\:hidden.md\:px-\[60px\] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  color: transparent !important;
+}
+
+/* Decrease height of the textfield */
+
+.flex.min-h-\[44px\].items-start.pl-2 {
+  min-height: 35px !important;
+}
+
+.flex.h-\[44px\].items-center.justify-between {
+  height: 35px !important;
+}
