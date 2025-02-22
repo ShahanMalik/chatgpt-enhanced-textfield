@@ -5,7 +5,7 @@
   align-items: center; /* Vertically align the elements */
   justify-content: space-between; /* Distribute space evenly */
   gap: 10px; /* Add some space between the items */
-  padding: 10px; /* Add padding inside the composer */
+  padding: 30 20px !important; /* Only horizontal padding */
 }
 
 /* Adjust individual child elements inside the composer */
@@ -31,8 +31,13 @@
   height: 24px;
 }
 
-/* Target the .bg-token-main-surface-primary class */
-.bg-token-main-surface-primary {
+/* Remove or comment out the old general rule */
+/* .bg-token-main-surface-primary {
+  background-color: transparent !important;
+} */
+
+/* Add specific rule for the header */
+.draggable.no-draggable-children.sticky.top-0.p-3.mb-1\.5.flex.items-center.justify-between.z-10.h-header-height.font-semibold.bg-token-main-surface-primary.max-md\:hidden {
   background-color: transparent !important;
 }
 
@@ -52,4 +57,47 @@
 
 .flex.h-\[44px\].items-center.justify-between {
   height: 35px !important;
+}
+
+/* Make first div take maximum space */
+#composer-background > .flex.flex-col.justify-start {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  align-items: flex-start !important; /* Align items to the left */
+}
+
+/* Keep second div at its natural size and center items */
+#composer-background > .flex.items-center.justify-between {
+  margin: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 100% !important;
+}
+
+/* Override any responsive margin */
+@media (min-width: 640px) {
+  #composer-background > .flex.items-center.justify-between {
+    margin: 0 !important;
+  }
+}
+
+/* Hide the 32px width element */
+.w-\[32px\].pt-1 {
+  display: none !important;
+}
+
+/* Hide the label text */
+.whitespace-nowrap.pl-1.pr-1.\[display\:--force-hide-label\] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Modify padding for specific button */
+.flex.h-9.min-w-8.items-center.justify-center.rounded-full.border.p-2 {
+  padding: 0 !important; /* Reset original padding */
+  padding-left: 0.25rem !important; /* pl-1 */
+  padding-right: 0.5rem !important; /* pr-2 */
+  padding-bottom: 0.25rem !important; /* pb-1 */
 }
