@@ -1,16 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Get the #composer-background element
   const composer = document.querySelector("#composer-background");
 
   if (composer) {
-    // Apply flex-row layout
-    composer.style.display = "flex"; // Use flexbox
-    composer.style.flexDirection = "row"; // Arrange items in a row
-    composer.style.alignItems = "center"; // Vertically center items
-    composer.style.justifyContent = "space-between"; // Space out items evenly
-    composer.style.gap = "10px"; // Add space between items
+    // Apply flex-column layout
+    composer.style.display = "flex";
+    composer.style.flexDirection = "column";
+    composer.style.minHeight = "100%";
 
-    // Ensure the padding and other necessary styles are applied
-    composer.style.padding = "10px";
+    // Target the first div and make it take maximum space
+    const firstDiv = composer.querySelector('.flex.flex-col.justify-start');
+    if (firstDiv) {
+      firstDiv.style.flex = "1";
+      firstDiv.style.minHeight = "0";
+    }
+
+    // Keep second div at natural size
+    const secondDiv = composer.querySelector('.mb-2.mt-1.flex.items-center.justify-between');
+    if (secondDiv) {
+      secondDiv.style.flexShrink = "0";
+    }
   }
 });
