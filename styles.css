@@ -101,3 +101,14 @@
   padding-right: 0.5rem !important; /* pr-2 */
   padding-bottom: 0.25rem !important; /* pb-1 */
 }
+
+/* Override sticky position at MD breakpoint */
+.sticky.top-9 {
+  top: 2.25rem !important; /* Equivalent to top-9 */
+}
+
+@media (min-width: 768px) {
+  .sticky.top-9.md\:top-\[5\.75rem\] {
+    top: 2.75rem !important;
+  }
+}
