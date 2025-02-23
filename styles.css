@@ -112,3 +112,12 @@
     top: 2.75rem !important;
   }
 }
+
+/* Override widths for specific elements */
+.p-2.w-80 {
+  width: 8.75rem !important; /* w-35 = 35 * 0.25rem = 8.75rem */
+}
+
+.-ml-1\.5.flex.flex-nowrap.gap-2.overflow-x-auto.p-1\.5 {
+  width: 15rem !important; /* w-60 = 60 * 0.25rem = 15rem */
+}
