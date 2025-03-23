@@ -4,7 +4,7 @@
   flex-direction: row !important; /* Arrange items in a row */
   align-items: center; /* Vertically align the elements */
   justify-content: space-between; /* Distribute space evenly */
-  gap: 10px; /* Add some space between the items */
+  gap: 20px; /* Add some space between the items */
   padding: 30 20px !important; /* Only horizontal padding */
 }
 
@@ -12,7 +12,7 @@
 #composer-background > div {
   display: flex;
   align-items: center; /* Vertically center the child elements */
-  gap: 10px; /* Add space between each child */
+  gap: 20px; /* Add space between each child */
 }
 
 /* Ensure the textarea fills the remaining space */
